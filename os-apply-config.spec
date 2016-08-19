@@ -33,6 +33,7 @@ Tool to apply openstack heat metadata to files on the system.
 
 %install
 %{__python2} setup.py install -O1 --skip-build --root %{buildroot}
+install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 
 %files
 %doc README.rst
@@ -40,5 +41,6 @@ Tool to apply openstack heat metadata to files on the system.
 %{_bindir}/os-apply-config
 %{_bindir}/os-config-applier
 %{python2_sitelib}/os_apply_config*
+%{_libexecdir}/%{name}/templates
 
 %changelog
