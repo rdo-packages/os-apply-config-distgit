@@ -16,7 +16,6 @@ BuildRequires:	python-pbr
 
 Requires:	python-pbr
 Requires:	python-setuptools
-Requires:	python-argparse
 Requires:	python-anyjson
 Requires:	pystache
 Requires:	python-six >= 1.9.0
