@@ -1,13 +1,18 @@
+%global milestone .0rc1
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	XXX
-Release:	XXX
+Version:	6.0.0
+Release:	0.1%{?milestone}%{?dist}
 Summary:	Configure files from cloud metadata
 
 License:	ASL 2.0
 URL:		http://pypi.python.org/pypi/%{name}
 Source0:	https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
+
+#
+# patches_base=6.0.0.0rc1
+#
 
 BuildArch:	noarch
 BuildRequires:	python2-devel
@@ -43,3 +48,6 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{_libexecdir}/%{name}/templates
 
 %changelog
+* Fri Feb 10 2017 Alfredo Moralejo <amoralej@redhat.com> 6.0.0-0.1.0rc1
+- Update to 6.0.0.0rc1
+
