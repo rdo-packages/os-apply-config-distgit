@@ -17,6 +17,7 @@ BuildRequires:	python-pbr
 Requires:	python-pbr
 Requires:	python-anyjson
 Requires:	pystache
+Requires:       PyYAML
 Requires:	python-six >= 1.9.0
 
 %description
