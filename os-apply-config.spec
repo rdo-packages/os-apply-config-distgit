@@ -1,8 +1,8 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	XXX
-Release:	XXX
+Version:	7.1.0
+Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
 License:	ASL 2.0
@@ -43,3 +43,6 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{_libexecdir}/%{name}/templates
 
 %changelog
+* Thu Aug 24 2017 Alfredo Moralejo <amoralej@redhat.com> 7.1.0-1
+- Update to 7.1.0
+
