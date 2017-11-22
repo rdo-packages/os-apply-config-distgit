@@ -1,7 +1,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	5.1.0
+Version:	5.1.1
 Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
@@ -43,6 +43,9 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{_libexecdir}/%{name}/templates
 
 %changelog
+* Wed Nov 22 2017 RDO <dev@lists.rdoproject.org> 5.1.1-1
+- Update to 5.1.1
+
 * Thu Apr 27 2017 rdo-trunk <javier.pena@redhat.com> 5.1.0-1
 - Update to 5.1.0
 
