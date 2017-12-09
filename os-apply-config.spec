@@ -1,7 +1,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	7.2.1
+Version:	7.2.2
 Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
@@ -43,6 +43,9 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{_libexecdir}/%{name}/templates
 
 %changelog
+* Sat Dec 09 2017 RDO <dev@lists.rdoproject.org> 7.2.2-1
+- Update to 7.2.2
+
 * Wed Nov 22 2017 RDO <dev@lists.rdoproject.org> 7.2.1-1
 - Update to 7.2.1
 
