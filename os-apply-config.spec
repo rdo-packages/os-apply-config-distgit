@@ -11,14 +11,14 @@ Source0:	https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.
 
 BuildArch:	noarch
 BuildRequires:	python2-devel
-BuildRequires:	python-setuptools
-BuildRequires:	python-pbr
+BuildRequires:	python2-setuptools
+BuildRequires:	python2-pbr
 
-Requires:	python-pbr
+Requires:	python2-pbr
 Requires:	python-anyjson
 Requires:	pystache
 Requires:       PyYAML
-Requires:	python-six >= 1.9.0
+Requires:	python2-six >= 1.10.0
 
 %description
 Tool to apply openstack heat metadata to files on the system.
