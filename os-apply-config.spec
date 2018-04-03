@@ -43,3 +43,4 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{_libexecdir}/%{name}/templates
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/os-apply-config/commit/?id=9124f56fac1354d63b1dc7759340e34a494c6569
