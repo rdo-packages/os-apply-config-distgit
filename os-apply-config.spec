@@ -1,3 +1,16 @@
+# Macros for py2/py3 compatibility
+%if 0%{?fedora} || 0%{?rhel} > 7
+%global pydefault 3
+%else
+%global pydefault 2
+%endif
+
+%global pydefault_bin python%{pydefault}
+%global pydefault_sitelib %python%{pydefault}_sitelib
+%global pydefault_install %py%{pydefault}_install
+%global pydefault_build %py%{pydefault}_build
+# End of macros for py2/py3 compatibility
+
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
@@ -10,15 +23,23 @@ URL:		http://pypi.python.org/pypi/%{name}
 Source0:	https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
 
 BuildArch:	noarch
-BuildRequires:	python2-devel
-BuildRequires:	python2-setuptools
-BuildRequires:	python2-pbr
 
-Requires:	python2-pbr
-Requires:	python-anyjson
-Requires:	pystache
-Requires:       PyYAML
-Requires:	python2-six >= 1.10.0
+BuildRequires:	python%{pydefault}-devel
+BuildRequires:	python%{pydefault}-setuptools
+BuildRequires:	python%{pydefault}-pbr
+
+Requires:   python%{pydefault}-pbr
+Requires:   python%{pydefault}-six >= 1.10.0
+
+%if %{pydefault} == 2
+Requires:   pystache
+Requires:   PyYAML
+Requires:   python-anyjson
+%else
+Requires:   python%{pydefault}-anyjson
+Requires:   python%{pydefault}-pystache
+Requires:   python%{pydefault}-PyYAML
+%endif
 
 %description
 Tool to apply openstack heat metadata to files on the system.
@@ -28,10 +49,10 @@ Tool to apply openstack heat metadata to files on the system.
 
 
 %build
-%{__python2} setup.py build
+%{pydefault_build}
 
 %install
-%{__python2} setup.py install -O1 --skip-build --root %{buildroot}
+%{pydefault_install}
 install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 
 %files
@@ -39,7 +60,7 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %doc LICENSE
 %{_bindir}/os-apply-config
 %{_bindir}/os-config-applier
-%{python2_sitelib}/os_apply_config*
 %{_libexecdir}/%{name}/templates
+%{pydefault_sitelib}/os_apply_config*
 
 %changelog
