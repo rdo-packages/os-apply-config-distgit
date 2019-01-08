@@ -1,14 +1,14 @@
 # Macros for py2/py3 compatibility
 %if 0%{?fedora} || 0%{?rhel} > 7
-%global pydefault 3
+%global pyver 3
 %else
-%global pydefault 2
+%global pyver 2
 %endif
 
-%global pydefault_bin python%{pydefault}
-%global pydefault_sitelib %python%{pydefault}_sitelib
-%global pydefault_install %py%{pydefault}_install
-%global pydefault_build %py%{pydefault}_build
+%global pyver_bin python%{pyver}
+%global pyver_sitelib %python%{pyver}_sitelib
+%global pyver_install %py%{pyver}_install
+%global pyver_build %py%{pyver}_build
 # End of macros for py2/py3 compatibility
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -24,21 +24,21 @@ Source0:	https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.
 
 BuildArch:	noarch
 
-BuildRequires:	python%{pydefault}-devel
-BuildRequires:	python%{pydefault}-setuptools
-BuildRequires:	python%{pydefault}-pbr
+BuildRequires:	python%{pyver}-devel
+BuildRequires:	python%{pyver}-setuptools
+BuildRequires:	python%{pyver}-pbr
 
-Requires:   python%{pydefault}-pbr
-Requires:   python%{pydefault}-six >= 1.10.0
+Requires:   python%{pyver}-pbr
+Requires:   python%{pyver}-six >= 1.10.0
 
-%if %{pydefault} == 2
+%if %{pyver} == 2
 Requires:   pystache
 Requires:   PyYAML
 Requires:   python-anyjson
 %else
-Requires:   python%{pydefault}-anyjson
-Requires:   python%{pydefault}-pystache
-Requires:   python%{pydefault}-PyYAML
+Requires:   python%{pyver}-anyjson
+Requires:   python%{pyver}-pystache
+Requires:   python%{pyver}-PyYAML
 %endif
 
 %description
@@ -49,10 +49,10 @@ Tool to apply openstack heat metadata to files on the system.
 
 
 %build
-%{pydefault_build}
+%{pyver_build}
 
 %install
-%{pydefault_install}
+%{pyver_install}
 install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 
 %files
@@ -61,6 +61,6 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{_bindir}/os-apply-config
 %{_bindir}/os-config-applier
 %{_libexecdir}/%{name}/templates
-%{pydefault_sitelib}/os_apply_config*
+%{pyver_sitelib}/os_apply_config*
 
 %changelog
