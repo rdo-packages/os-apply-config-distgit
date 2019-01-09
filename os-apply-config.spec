@@ -47,6 +47,8 @@ Tool to apply openstack heat metadata to files on the system.
 %prep
 %setup -q -n %{name}-%{upstream_version}
 
+# Remove unnecessary shebang
+sed -i '1{/^#!/d}' os_apply_config/tests/templates/etc/glance/script.conf
 
 %build
 %{pyver_build}
