@@ -1,7 +1,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	9.1.0
+Version:	9.1.1
 Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
@@ -43,6 +43,9 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{_libexecdir}/%{name}/templates
 
 %changelog
+* Thu Mar 14 2019 RDO <dev@lists.rdoproject.org> 9.1.1-1
+- Update to 9.1.1
+
 * Mon Aug 27 2018 RDO <dev@lists.rdoproject.org> 9.1.0-1
 - Update to 9.1.0
 
