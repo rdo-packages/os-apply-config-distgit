@@ -1,7 +1,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	8.3.1
+Version:	8.3.2
 Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
@@ -43,6 +43,9 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{_libexecdir}/%{name}/templates
 
 %changelog
+* Fri Jun 21 2019 RDO <dev@lists.rdoproject.org> 8.3.2-1
+- Update to 8.3.2
+
 * Mon Mar 18 2019 RDO <dev@lists.rdoproject.org> 8.3.1-1
 - Update to 8.3.1
 
