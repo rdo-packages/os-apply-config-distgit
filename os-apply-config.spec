@@ -2,8 +2,8 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	XXX
-Release:	XXX
+Version:	11.3.0
+Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
 License:	ASL 2.0
@@ -49,3 +49,6 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{python3_sitelib}/os_apply_config*
 
 %changelog
+* Tue Sep 29 2020 RDO <dev@lists.rdoproject.org> 11.3.0-1
+- Update to 11.3.0
+
