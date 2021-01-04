@@ -1,11 +1,11 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	11.3.0
-Release:	2%{?dist}
+Version:	12.0.0
+Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
 License:	ASL 2.0
@@ -66,6 +66,9 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{python3_sitelib}/os_apply_config*
 
 %changelog
+* Mon Jan 04 2021 RDO <dev@lists.rdoproject.org> 12.0.0-1
+- Update to 12.0.0
+
 * Tue Oct 20 2020 Joel Capitao <jcapitao@redhat.com> 11.3.0-2
 - Enable sources tarball validation using GPG signature.
 
