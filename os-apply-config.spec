@@ -14,7 +14,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	10.5.2
+Version:	10.6.0
 Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
@@ -67,6 +67,9 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{pyver_sitelib}/os_apply_config*
 
 %changelog
+* Mon Apr 05 2021 RDO <dev@lists.rdoproject.org> 10.6.0-1
+- Update to 10.6.0
+
 * Mon Feb 08 2021 RDO <dev@lists.rdoproject.org> 10.5.2-1
 - Update to 10.5.2
 
