@@ -2,7 +2,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	11.2.2
+Version:	11.2.3
 Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
@@ -49,6 +49,9 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{python3_sitelib}/os_apply_config*
 
 %changelog
+* Wed Apr 14 2021 RDO <dev@lists.rdoproject.org> 11.2.3-1
+- Update to 11.2.3
+
 * Thu Jan 28 2021 RDO <dev@lists.rdoproject.org> 11.2.2-1
 - Update to 11.2.2
 
