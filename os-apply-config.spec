@@ -32,7 +32,6 @@ BuildRequires:	python3-pbr
 Requires:   python3-pbr
 Requires:   python3-six >= 1.10.0
 
-Requires:   python3-anyjson
 Requires:   python3-pystache
 Requires:   python3-PyYAML
 
