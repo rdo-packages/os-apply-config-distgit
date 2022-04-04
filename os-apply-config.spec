@@ -32,7 +32,7 @@ BuildRequires:	python3-pbr
 Requires:   python3-pbr
 
 Requires:   python3-pystache
-Requires:   python3-PyYAML
+Requires:   python3-pyyaml
 
 %description
 Tool to apply openstack heat metadata to files on the system.
