@@ -1,0 +1,27 @@
+From f06ac135d3905d293a9604624e35321c17f40dda Mon Sep 17 00:00:00 2001
+From: Joel Capitao <jcapitao@redhat.com>
+Date: Wed, 26 Jul 2023 17:47:40 +0200
+Subject: [PATCH] Update the shebang to python3
+
+It's needed downstream when packaging. In RDO and Fedora,
+we are hitting the issue "ERROR: ambiguous python shebang" during
+the build.
+
+Change-Id: I19d99f96d9687c27e04e8cc2ecbf61b42a4dcdf3
+---
+ os_apply_config/tests/templates/etc/glance/script.conf | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/os_apply_config/tests/templates/etc/glance/script.conf b/os_apply_config/tests/templates/etc/glance/script.conf
+index 30bd0eb..5e3c8e3 100755
+--- a/os_apply_config/tests/templates/etc/glance/script.conf
++++ b/os_apply_config/tests/templates/etc/glance/script.conf
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ import json
+ import sys
+ params = json.loads(sys.stdin.read())
+-- 
+2.40.1
+
