@@ -22,6 +22,30 @@
       },
       "revId": "9a0238bc5c98271744652328a0d48b41227cbbd4",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78fe7a4f_74156780",
+        "filename": "os-apply-config.spec",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-07-31T15:32:13Z",
+      "side": 1,
+      "message": "In PS8 I removed it and it failed.\nI added it back in PS9",
+      "parentUuid": "85a9e0f9_431f69c9",
+      "range": {
+        "startLine": 40,
+        "startChar": 10,
+        "endLine": 40,
+        "endChar": 14
+      },
+      "revId": "9a0238bc5c98271744652328a0d48b41227cbbd4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
