@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb3f775a_c5670252",
+        "filename": "os-apply-config.spec",
+        "patchSetId": 10
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-07-31T16:07:01Z",
+      "side": 1,
+      "message": "not building docs, so we should remove sphinx and openstackdocstheme",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 22
+      },
+      "revId": "a6c62a3d84c77bb1980cc64e348a1b63815fd874",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7abd6fc8_28ec1816",
+        "filename": "os-apply-config.spec",
+        "patchSetId": 10
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-07-31T16:07:01Z",
+      "side": 1,
+      "message": "Sorry, after rereading it, it\u0027s probably better the original before the patch, i doubt script.conf is a script so remove shebang and -x it lgtm",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 16
+      },
+      "revId": "a6c62a3d84c77bb1980cc64e348a1b63815fd874",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
