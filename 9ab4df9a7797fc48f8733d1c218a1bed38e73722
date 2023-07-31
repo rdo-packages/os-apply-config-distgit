@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b8a1aca_7df3f9b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-07-31T14:52:16Z",
+      "side": 1,
+      "message": "why not using %py3_shebang_fix macro?",
+      "revId": "9ab4df9a7797fc48f8733d1c218a1bed38e73722",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
