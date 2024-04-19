@@ -1,12 +1,12 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318
+%global sources_gpg_sign 0xf8675126e2411e7748dd46662fc2093e4682645f
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order bashate sphinx openstackdocstheme
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	13.2.0
+Version:	14.0.0
 Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
@@ -79,6 +79,9 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{python3_sitelib}/os_apply_config*
 
 %changelog
+* Fri Apr 19 2024 RDO <dev@lists.rdoproject.org> 14.0.0-1
+- Update to 14.0.0
+
 * Tue Apr 16 2024 RDO <dev@lists.rdoproject.org> 13.2.0-1
 - Update to 13.2.0
 
