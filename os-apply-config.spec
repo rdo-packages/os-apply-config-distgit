@@ -6,7 +6,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		os-apply-config
-Version:	13.2.0
+Version:	14.0.0
 Release:	1%{?dist}
 Summary:	Configure files from cloud metadata
 
@@ -79,6 +79,9 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{python3_sitelib}/os_apply_config*
 
 %changelog
+* Fri Apr 19 2024 RDO <dev@lists.rdoproject.org> 14.0.0-1
+- Update to 14.0.0
+
 * Tue Apr 16 2024 RDO <dev@lists.rdoproject.org> 13.2.0-1
 - Update to 13.2.0
 
