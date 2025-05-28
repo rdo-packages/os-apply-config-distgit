@@ -85,3 +85,4 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 * Tue Apr 16 2024 RDO <dev@lists.rdoproject.org> 13.2.0-1
 - Update to 13.2.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/os-apply-config/commit/e6e9c4462cac4a3669142d4421caef847e23e96c
