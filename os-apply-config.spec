@@ -79,3 +79,4 @@ install -d -m 755 %{buildroot}%{_libexecdir}/%{name}/templates
 %{python3_sitelib}/os_apply_config*
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/os-apply-config/commit/e6e9c4462cac4a3669142d4421caef847e23e96c
